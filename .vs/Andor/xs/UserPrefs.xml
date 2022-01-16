@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{74AE01E7-B031-4000-A101-3B30313AF1CB}|Default">
+  <MonoDevelop.Ide.ItemProperties.Andor PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="Views/Home/Index.cshtml" Line="121" Column="85" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Andor" expanded="True">
+            <Node name="Andor" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
