@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{74AE01E7-B031-4000-A101-3B30313AF1CB}|Default">
   <MonoDevelop.Ide.ItemProperties.Andor PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/style.css">
     <Files>
-      <File FileName="Views/Home/Index.cshtml" Line="121" Column="85" />
+      <File FileName="Views/Home/Index.cshtml" Line="128" Column="1" />
+      <File FileName="wwwroot/css/style.css" Line="1439" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,11 +11,13 @@
           <Node name="Andor" expanded="True">
             <Node name="Andor" expanded="True">
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True">
+                  <Node name="style.css" selected="True" />
                 </Node>
               </Node>
-              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
