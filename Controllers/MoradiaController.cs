@@ -18,7 +18,6 @@ namespace Andor.Controllers
 
         public IActionResult Index(int? id)
         {
-            //return View();
             return View("Detalhes");
         }
 
