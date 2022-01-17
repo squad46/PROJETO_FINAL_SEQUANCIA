@@ -1,3 +1,7 @@
+#ferretti
+bin/
+obj/
+
 # globs
 Makefile.in
 *.userprefs
