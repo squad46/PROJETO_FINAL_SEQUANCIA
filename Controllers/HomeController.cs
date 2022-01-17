@@ -37,11 +37,6 @@ namespace Andor.Controllers
                     }
                 ).ToList();
 
-            foreach (var trab in _trabalhos)
-            {
-
-            }
-
             ViewData["_trabalhos"] = _trabalhos;
             */
             ViewData["trabalhos"] = _context.Trabalhos.OrderByDescending(x => x.DataCadastro).ToList();    // cria lista de trabalhos
