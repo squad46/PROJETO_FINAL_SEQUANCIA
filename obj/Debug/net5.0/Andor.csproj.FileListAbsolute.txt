@@ -522,7 +522,6 @@ C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pess
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\experienciaCreate.cshtml.g.cs
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\formacaoCreate.cshtml.g.cs
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\Index.cshtml.g.cs
-C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\moradiaCreate.cshtml.g.cs
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\PerfilPublico.cshtml.g.cs
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\trabalhoCreate.cshtml.g.cs
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\_Details.cshtml.g.cs
@@ -540,3 +539,6 @@ C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Andor.dll
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\ref\Andor.dll
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Andor.pdb
 C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Andor.genruntimeconfig.cache
+C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Andor.csproj.AssemblyReference.cache
+C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Pessoa\_moradiaCreate.cshtml.g.cs
+C:\Users\FERRETTI\Desktop\Projeto pós entrega\obj\Debug\net5.0\Razor\Views\Moradia\Index.cshtml.g.cs

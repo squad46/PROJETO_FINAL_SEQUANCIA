@@ -28,8 +28,6 @@ namespace Andor.Controllers
             //return View(await _context.Pessoas.ToListAsync());
         }
 
-  
-
         // GET: Pessoa/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -189,9 +187,16 @@ namespace Andor.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             // deleta moradias anunciadas
+  
             var moradia = _context.Moradias.Where(p => p.Id_pessoa == id).ToList();
             foreach (var _moradia in moradia)
             {
+                var imagemMoradia = _context.Imagens.Where(p => p.Id_tipo == _moradia.Id && p.Tipo == "moradia").ToList();
+                foreach(var imagem in imagemMoradia)
+                { 
+                    _context.Imagens.Remove(imagem);
+                    _context.SaveChanges();
+                }
                 _context.Moradias.Remove(_moradia);
                 await _context.SaveChangesAsync();
             }
@@ -340,6 +345,7 @@ namespace Andor.Controllers
         //------------------------------- inicio controles de moradia -------------------------------------------------------------
 
         // GET: Moradia/Create
+        /*
         public IActionResult moradiaCreate(int? Id_pessoa)
         {
             ViewData["Id_pessoa"] = Id_pessoa;
@@ -356,17 +362,32 @@ namespace Andor.Controllers
             await _context.SaveChangesAsync();
             return Redirect("~/Pessoa/Details/" + idPessoa);
         }
+        */
 
 
-        [HttpPost]// Exclui moradia e retorna para o perfil
-        public IActionResult deletarMoradia(Moradia moradia)
-        {
-            var moradiaDelete = _context.Moradias.Find(moradia.Id);
-            var idPessoa = moradiaDelete.Id_pessoa;
-            _context.Remove(moradiaDelete);
-            _context.SaveChanges();
-            return Redirect("~/Pessoa/Details/" + idPessoa);
-        }
+        /*
+       [HttpPost]// Exclui moradia e retorna para o perfil
+
+
+       public IActionResult deletarMoradia(Moradia moradia)
+       {
+           var moradiaDelete = _context.Moradias.Find(moradia.Id);
+           var imagemMoradia = _context.Imagens.Where(p => p.Id_tipo == moradia.Id && p.Tipo == "moradia").ToList();
+           var idPessoa = moradiaDelete.Id_pessoa;
+           _context.Remove(moradiaDelete);
+           _context.SaveChanges();
+
+           foreach (var imagem in imagemMoradia) // exclui imagens de moradia
+           {
+               _context.Imagens.Remove(imagem);
+               _context.SaveChanges();
+           }
+
+           return Redirect("~/Pessoa/Details/" + idPessoa);
+       }
+
+       */
+
         // ------------------- fim moradia controles -----------------------
 
         private bool PessoaExists(int id)

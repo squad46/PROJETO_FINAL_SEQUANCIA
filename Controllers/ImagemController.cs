@@ -4,10 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-using System;
-using System.Net;
-using System.Text;
 
 namespace Andor.Controllers
 {
@@ -60,7 +56,6 @@ namespace Andor.Controllers
             //return RedirectToAction("Index");
         }
 
-
         public IActionResult VerImagem(int id)
         {
             Imagem imagem = _context.Imagens.FirstOrDefault(m => m.Id_tipo == id);
@@ -76,5 +71,16 @@ namespace Andor.Controllers
                 return new FileStreamResult(ms, _imagem.ContentType);
             }
         }
+        public IActionResult VerImagemMoradia(int id)
+        {
+            Imagem imagem = _context.Imagens.FirstOrDefault(m => m.Id == id);
+            if (imagem != null)
+            {
+                MemoryStream ms = new MemoryStream(imagem.Dados);
+                return new FileStreamResult(ms, imagem.ContentType);
+            }
+            return null;
+        }
+
     }
 }

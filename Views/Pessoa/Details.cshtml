@@ -236,8 +236,8 @@
                             <h4 class="title-details">Oferta de imóvel</h4>
                         </div>
                         <div class="col pt-2 text-right">
-                            <a class="btnn btn-editar border" asp-controller="Moradia" asp-action="Novo" asp-route-Id_pessoa="@Model.Id">Adicionar c/ imagem</a>
-                            <a class="btnn btn-editar border" asp-controller="Pessoa" asp-action="moradiaCreate" asp-route-Id_pessoa="@Model.Id">Adicionar</a>
+                            <a class="btnn btn-editar border" asp-controller="Moradia" asp-action="Novo" asp-route-Id_pessoa="@Model.Id">Adicionar</a>
+                            <!-- <a class="btnn btn-editar border" asp-controller="Pessoa" asp-action="moradiaCreate" asp-route-Id_pessoa="@Model.Id">Adicionar</a> -->
                         </div>
                     </div>
                     @{
@@ -251,7 +251,7 @@
                                             <h2 class="title-details">@moradia.Name</h2>
                                         </div>
                                         <div class="col text-right">
-                                            <form asp-controller="Pessoa" asp-action="deletarMoradia">
+                                            <form asp-controller="Moradia" asp-action="Excluir">
                                                 <input asp-for="Id" type="text" value="@moradia.Id" style="display:none;">
                                                 <button class="btnn btn-excluir-x" type="submit"><b>Excluir X</b></button>
                                             </form>
