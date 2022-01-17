@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj": {}
+    "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj": {
+    "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj",
+        "projectUniqueName": "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj",
         "projectName": "Andor",
-        "projectPath": "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj",
-        "packagesPath": "C:\\Users\\FERRETTI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\obj\\",
+        "projectPath": "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj",
+        "packagesPath": "/Users/thiago/.nuget/packages/",
+        "outputPath": "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\FERRETTI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/thiago/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +41,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.CodeAnalysis.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.Data.Edm": {
               "target": "Package",
               "version": "[5.8.5, )"
@@ -89,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
         }
       }
     }
