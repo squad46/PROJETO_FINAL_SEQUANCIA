@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj": {}
+    "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj": {}
   },
   "projects": {
-    "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj": {
+    "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj",
+        "projectUniqueName": "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj",
         "projectName": "Andor",
-        "projectPath": "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/Andor.csproj",
-        "packagesPath": "/Users/thiago/.nuget/packages/",
-        "outputPath": "/Users/thiago/Documents/GitHub/PROJETO_FINAL_SEQUANCIA/obj/",
+        "projectPath": "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\Andor.csproj",
+        "packagesPath": "C:\\Users\\FERRETTI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FERRETTI\\Desktop\\Projeto pós entrega\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/thiago/.config/NuGet/NuGet.Config"
+          "C:\\Users\\FERRETTI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -90,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
