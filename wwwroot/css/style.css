@@ -655,6 +655,7 @@ li {
         width: 65px;
         height: 65px;
         transition: all 0.3s ease-in-out;
+        object-fit: cover;
     }
 
         .avatar-profile img:hover {
@@ -764,6 +765,10 @@ li {
 .perfil-menu img {
     width: 50%;
     border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 5px solid #fff;
+    object-fit: cover;
 }
 
 .perfil-menu ul li {
@@ -1153,7 +1158,7 @@ h4 {
     position: relative;
     width: 440px;
     max-width: 100%;
-    height: 400px;
+    height: 450px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective: 800px;

@@ -46,7 +46,7 @@
                                     <div class="center-wrap">
                                         <div class="section text-center">
                                             <h4 class="mb-4 pb-3">Cadastro</h4>
-                                            <form asp-controller="Pessoa" asp-action="Create">
+                                            <form asp-controller="Pessoa" asp-action="Create" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <input asp-for="Nome" class="form-style" placeholder="Seu Nome completo" id="logname" autocomplete="off">
                                                     <i class="input-icon uil uil-user"></i>
@@ -61,8 +61,8 @@
                                                 </div>
                                                 <div class="form-group mt-2">
                                                     <label class="form-style text-left" for='logavatar'>Selecionar uma foto para o perfil</label>
-                                                    <input type="file" class="form-style" placeholder="Avatar" id="logavatar" autocomplete="off" style="display:none;">
-                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                    <input type="file" class="form-style" placeholder="Avatar" id="logavatar" name="arquivos" autocomplete="off" style="display:none;">
+                                                    <i class="input-icon uil uil-at"></i>
                                                 </div>
                                                 <div class="form-group" style="display:none;">
                                                     @{DateTime thisDay = DateTime.Today;}
