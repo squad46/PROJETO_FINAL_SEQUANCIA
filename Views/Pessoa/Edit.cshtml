@@ -4,8 +4,6 @@
     ViewData["Title"] = "Editar";
 }
 
-
-
 <div  class="container-fluid pt-0 mb-5 pb-5 modal-dialog-scrollable bg-light" id="scrollbar">
     <div  class="container">
         <div class="row justify-content-center pt-2"  style="padding-bottom:150px;">
@@ -73,6 +71,49 @@
                             <div class="col-12">
                                 <label class="control-label">Endereço</label>
                                 <input asp-for="Endereco" class="form-control" />
+                            </div>
+                            <div class="col-12">
+                                <label class="control-label">Bairro</label>
+                                <input asp-for="Bairro" class="form-control" />
+                            </div>
+                            <div class="col-12">
+                                <label class="control-label">UF</label>
+                      
+                                <select asp-for="UF" class="custom-select">
+                                    <option selected>-</option>
+                                    <option>AC</option>
+                                    <option>AL</option>
+                                    <option>AP</option>
+                                    <option>AM</option>
+                                    <option>BA</option>
+                                    <option>CE</option>
+                                    <option>DF</option>
+                                    <option>ES</option>
+                                    <option>GO</option>
+                                    <option>MA</option>
+                                    <option>MS</option>
+                                    <option>MT</option>
+                                    <option>MG</option>
+                                    <option>PA</option>
+                                    <option>PB</option>
+                                    <option>PR</option>
+                                    <option>PE</option>
+                                    <option>PI</option>
+                                    <option>RJ</option>
+                                    <option>RN</option>
+                                    <option>RS</option>
+                                    <option>RO</option>
+                                    <option>RR</option>
+                                    <option>SC</option>
+                                    <option>SP</option>
+                                    <option>SE</option>
+                                    <option>TO</option>
+                                </select>
+
+                            </div>
+                            <div class="col-12">
+                                <label class="control-label">Cidade</label>
+                                <input asp-for="Cidade" class="form-control" />
                             </div>
                             <div class="col-3">
                                 <label asp-for="Numero" class="control-label"></label>

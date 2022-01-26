@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Andor.Models;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace Andor.Controllers
 {
@@ -18,7 +19,6 @@ namespace Andor.Controllers
         {
             _context = context;
         }
-
 
 
         // GET: Pessoa
@@ -64,7 +64,55 @@ namespace Andor.Controllers
         }
 
         //  Pessoa/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha,DataCadastro")] Pessoa pessoa, IList<IFormFile> arquivos)
+        {
+            //verifica se email já foi cadastrado e retorna mensagem se sim
+            var verificaEmail = _context.Pessoas.Where(p => p.Email == pessoa.Email).ToList();
+            if (verificaEmail.Count > 0)
+            {
+                ViewData["mensagem"] = "Este email já foi cadastrado!";
+                return View("../Login/Index");
+            }
 
+            IFormFile imagemEnviada = arquivos.FirstOrDefault();
+            if (imagemEnviada != null && ModelState.IsValid) // verifica se os campos de email, senha e imagem foram preenchidos
+            {
+
+                _context.Add(pessoa);
+                await _context.SaveChangesAsync();
+
+                imagemEnviada.ContentType.ToLower().StartsWith("image/");
+                if (imagemEnviada.ContentType == "image/jpeg" || imagemEnviada.ContentType == "image/png") // confirma se o formato da imagem é png ou jpg para continuar
+                {
+                    MemoryStream ms = new MemoryStream(); // salva imagem do perfil
+                    imagemEnviada.OpenReadStream().CopyTo(ms);
+                    Imagem imagemEntity = new Imagem()
+                    {
+                        Id_tipo = pessoa.Id,
+                        Tipo = "perfil",
+                        Nome = imagemEnviada.Name,
+                        Dados = ms.ToArray(),
+                        ContentType = imagemEnviada.ContentType
+                    };
+                    _context.Imagens.Add(imagemEntity);
+                    _context.SaveChanges();
+                }
+
+                ViewData["mensagem"] = "Usuário cadastrado com sucesso!";
+                return View();
+            }
+            else
+            {
+                ViewData["mensagem"] = "Todos os campos devem ser preenchidos.";
+                return View("../Login/Index");
+            }
+        }
+
+
+        // modelo antigo -- este código será removido após testes da nova versão
+        /*
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha,Telefone,CPF,Endereco,Numero,CEP,Sexo,DataNascimento,Nacionalidade,DataCadastro")] Pessoa pessoa)
@@ -91,7 +139,7 @@ namespace Andor.Controllers
             }
             return View(pessoa);
         }
-
+        */
 
 
         // GET: Pessoa/Edit/5
@@ -118,11 +166,9 @@ namespace Andor.Controllers
         }
 
         // POST: Pessoa/Edit/5
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Senha,Telefone,CRNM,CPF,Endereco,Numero,CEP,Sexo,DataNascimento,Nacionalidade,DataCadastro")] Pessoa pessoa)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Senha,Telefone,CRNM,CPF,Endereco,Bairro,UF,Cidade,Numero,CEP,Sexo,DataNascimento,Nacionalidade,DataCadastro")] Pessoa pessoa)
         {
             if (id != pessoa.Id)
             {
