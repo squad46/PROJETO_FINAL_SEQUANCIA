@@ -172,7 +172,7 @@
                             <div class="post-profile d-flex flex-fill justify-content-between">
                                 <div class="avatar-profile">
                                     <a asp-controller="Pessoa" asp-action="PerfilPublico" asp-route-id="@trabalho.Id_pessoa">
-                                        <img src="/Imagem/VerImagem/@trabalho.Id_pessoa" alt="imagem do perfil" />
+                                        <img src="/Imagem/VerImagem/@trabalho.Id_pessoa?tipo=perfil" alt="imagem do perfil" />
                                     </a>
                                 </div>
                                 <div class="d-flex flex-column">
@@ -218,7 +218,7 @@
                             <div class="post-profile d-flex flex-fill justify-content-between">
                                 <div class="avatar-profile">
                                     <a asp-controller="Pessoa" asp-action="PerfilPublico" asp-route-id="@moradia.Id_pessoa">
-                                        <img src="/Imagem/VerImagem/@moradia.Id_pessoa" alt="imagem do perfil" />
+                                        <img src="/Imagem/VerImagem/@moradia.Id_pessoa?tipo=perfil" alt="imagem do perfil" />
                                     </a>
                                 </div>
                                 <div class="d-flex flex-column">

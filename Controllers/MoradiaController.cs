@@ -46,7 +46,7 @@ namespace Andor.Controllers
         }
 
         [HttpPost] // Adiciona anuncio de moradia
-        public IActionResult Novo([Bind("Id,Id_pessoa,Name,Descricao,Tipo,Preco,Endereco,Numero,CEP,UF,Cidade,NomeContato,TelefoneContato,EmailContato,DataCadastro")] Moradia moradia,
+        public IActionResult Novo([Bind("Id,Id_pessoa,Name,Descricao,Tipo,Preco,Endereco,Bairro,Numero,CEP,UF,Cidade,NomeContato,TelefoneContato,EmailContato,DataCadastro")] Moradia moradia,
             IList<IFormFile> img1, IList<IFormFile> img2, IList<IFormFile> img3, IList<IFormFile> img4)
         {
       
