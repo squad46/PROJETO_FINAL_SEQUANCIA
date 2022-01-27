@@ -21,6 +21,8 @@ namespace Andor.Models
         public double Preco { get; set; }
         [Column(TypeName = "nvarchar(60)")]
         public string Endereco { get; set; }
+        [Column(TypeName = "nvarchar(20)")]
+        public string Bairro { get; set; }
         [Column(TypeName = "int")]
         public int Numero { get; set; }
         [Column(TypeName = "int")]

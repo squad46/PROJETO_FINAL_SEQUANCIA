@@ -1,7 +1,4 @@
-﻿@{
-
-}
-<div id="scrollbar" class="container-fluid pt-0 bg-light">
+﻿<div id="scrollbar" class="container-fluid pt-0 bg-light">
     <div class="container">
         @{
             var temAvatar = ViewData["temAvatar"];
@@ -9,26 +6,14 @@
             foreach (var pessoa in pessoas)
             {
                 <div class="row container-perfil-details p-2">
-                    <div class="perfil-menu mt-2 p-3">
+                    <div class="perfil-menu mt-2 p-3"><!-- coluna da esquerda -->
                         @{
-                            @if (temAvatar != null)
-                            {
-                                @if (temAvatar.Equals(1))
-                                {   
-                                    <img src="/Imagem/VerImagem/@pessoa.Id" alt="imagem do perfil"/>
-                                }
-                                else
-                                {
-                                    <img class="" src="~/img/perfil.png" alt="imagem do perfil"/>
-                                }
-                            }
-                            else
-                            {
-                                <img class="" src="~/img/perfil.png" alt="imagem do perfil"/>
-                            }
+                            <img src="/Imagem/VerImagem/@pessoa.Id?tipo=perfil" alt="imagem do perfil"/>
                         }
-                    </div>         
-                    <div class="forms-details mt-2">
+                    </div>   
+                
+                    <div class="forms-details mt-2"><!-- coluna da direita -->
+                    
                         <h4 class="text-black-50 pt-3 ">@pessoa.Nome</h4>
                         <hr />
                         <div class="row">
@@ -60,7 +45,7 @@
                                 <p>@String.Format("{0:dd/MM/yyyy}",pessoa.DataCadastro) &nbsp;</p>
                             </div>
                         </div>
-                    </div>          
+                    </div> 
                 </div>
             }
         }

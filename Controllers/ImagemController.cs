@@ -56,24 +56,18 @@ namespace Andor.Controllers
             //return RedirectToAction("Index");
         }
 
-        public IActionResult VerImagem(int id)
+        public IActionResult VerImagem(int id, string tipo) // busca imagem
         {
-            Imagem imagem = _context.Imagens.FirstOrDefault(m => m.Id_tipo == id);
-            if (imagem != null)
+            Imagem imagem = new Imagem();
+            if (tipo == "moradia")
             {
-                MemoryStream ms = new MemoryStream(imagem.Dados);
-                return new FileStreamResult(ms, imagem.ContentType);
+                imagem = _context.Imagens.FirstOrDefault(m => m.Id == id && m.Tipo == tipo);
             }
-            else // caso nao tiver avatar, pega avatar padrao que será registrado com Id_pessoa = 0 
+            else if(tipo == "perfil") 
             {
-                Imagem _imagem = _context.Imagens.FirstOrDefault(i => i.Id_tipo == 0);
-                MemoryStream ms = new MemoryStream(_imagem.Dados);
-                return new FileStreamResult(ms, _imagem.ContentType);
+                imagem = _context.Imagens.FirstOrDefault(m => m.Id_tipo == id && m.Tipo == tipo);
             }
-        }
-        public IActionResult VerImagemMoradia(int id)
-        {
-            Imagem imagem = _context.Imagens.FirstOrDefault(m => m.Id == id);
+            
             if (imagem != null)
             {
                 MemoryStream ms = new MemoryStream(imagem.Dados);
@@ -81,6 +75,19 @@ namespace Andor.Controllers
             }
             return null;
         }
+
+/*
+        public IActionResult VerImagemMoradia(int id, string tipo) // busca imagem de moradia
+        {
+            Imagem imagem = _context.Imagens.FirstOrDefault(m => m.Id == id && m.Tipo == tipo);
+            if (imagem != null)
+            {
+                MemoryStream ms = new MemoryStream(imagem.Dados);
+                return new FileStreamResult(ms, imagem.ContentType);
+            }
+            return null;
+        }
+*/     
 
     }
 }
