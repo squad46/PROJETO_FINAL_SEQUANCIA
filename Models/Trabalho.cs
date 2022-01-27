@@ -25,8 +25,11 @@ namespace Andor.Models
         public string Endereco { get; set; }
         [Column(TypeName = "int")]
         public int Numero { get; set; }
+        [Column(TypeName = "nvarchar(20)")]
+        public string Bairro { get; set; }
         [Column(TypeName = "int")]
         public int CEP { get; set; }
+        [Column(TypeName = "nvarchar(2)")]
         public string UF { get; set; }
         [Column(TypeName = "nvarchar(20)")]
         public string Cidade { get; set; }

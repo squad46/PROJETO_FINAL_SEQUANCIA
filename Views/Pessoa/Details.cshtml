@@ -214,16 +214,15 @@
                                                 <dt class="col-4">Tipo</dt>
                                                 <dd class="col-8">@trabalho.Tipo</dd>
                                                 <dt class="col-4">Endereço</dt>
-                                                <dd class="col-8">@trabalho.Endereco, @trabalho.Numero. CEP @trabalho.CEP.ToString("#####-###") @trabalho.Cidade/@trabalho.UF </dd>
+                                                <dd class="col-8">@trabalho.Endereco, @trabalho.Numero. @trabalho.Bairro - CEP @trabalho.CEP.ToString("#####-###") @trabalho.Cidade/@trabalho.UF </dd>
                                                 <dt class="col-4">Postado</dt>
                                                 <dd class="col-8">@String.Format("{0:dd/MM/yyyy}", trabalho.DataCadastro)</dd>
-                                       
                                                 <dt class="col-4">Atividade</dt>
                                                 <dd class="col-8">@trabalho.Atividade</dd>
                                                 <dt class="col-4">Salário</dt>
                                                 <dd class="col-8">R$@trabalho.Salario.ToString("#,###,###.00")</dd>
                                                 <dt class="col-4">Contato</dt>
-                                                <dd class="col-8">@trabalho.NomeContato Tel: @trabalho.TelefoneContato email: @trabalho.EmailContato</dd>
+                                                <dd class="col-8">@trabalho.NomeContato Tel: @Convert.ToInt64(trabalho.TelefoneContato).ToString("(00) 00000-0000") email: @trabalho.EmailContato</dd>
                                             </dl>
                                         </div>
                                     </div>

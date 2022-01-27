@@ -33,7 +33,6 @@ namespace Andor.Models
         public string UF { get; set; }
         [Column(TypeName = "nvarchar(20)")]
         public string Cidade { get; set; }
-
         [Column(TypeName = "nvarchar(1)")]
         public string Sexo { get; set; }
         [DataType(DataType.Date)][Column(TypeName = "datetime")]

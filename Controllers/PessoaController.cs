@@ -366,7 +366,7 @@ namespace Andor.Controllers
         // POST: Trabalho/Create - Adiciona trabalho no perfil
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> trabalhoCreate([Bind("Id,Id_pessoa,Instituicao,Nome,Atividade,Tipo,Salario,Endereco,Numero,CEP,UF,Cidade,NomeContato,TelefoneContato,EmailContato,DataCadastro")] Trabalho trabalho)
+        public async Task<IActionResult> trabalhoCreate([Bind("Id,Id_pessoa,Instituicao,Nome,Atividade,Tipo,Salario,Endereco,Numero,Bairro,CEP,UF,Cidade,NomeContato,TelefoneContato,EmailContato,DataCadastro")] Trabalho trabalho)
         {
             var idPessoa = trabalho.Id_pessoa;
             _context.Add(trabalho);
