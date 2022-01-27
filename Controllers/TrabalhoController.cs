@@ -18,12 +18,14 @@ namespace Andor.Controllers
 
         public IActionResult Index()
         {
-            return View("Detalhes");
+            ViewData["trabalhos"] = _context.Trabalhos.OrderByDescending(x => x.DataCadastro).ToList(); // cria lista de trabalhos
+
+
+            return View();
         }
 
 
         [HttpGet]
-
         public IActionResult Detalhes(int id, int pessoaId)
         {
       
