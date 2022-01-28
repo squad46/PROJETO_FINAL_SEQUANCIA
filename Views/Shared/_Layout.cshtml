@@ -111,11 +111,11 @@
             <!-- Menu Lateral fixo -->
             <nav class="menu-right">
                 <div class="button-bg one"><a href=""><img src="~/img/info uteis.svg"></a></div>
-                <div class="button-bg two"><a href="~/Trabalho"><img src="~/img/empregos.svg"></a></div>
-                <div class="button-bg three"><a href=""><img src="~/img/moradia.svg"></a></div>
-                <div class="button-bg four"><a href=""><img src="~/img/ongs parceiras.svg"></a></div>
-                <div class="button-bg five"><a href=""><img src="~/img/doacao.svg"></a></div>
-                <div class="button-bg six"><a href=""><img src="~/img/Vector.svg"></a></div>
+                <div class="button-bg two"><a asp-area="" asp-controller="Trabalho" asp-action="index"><img src="~/img/empregos.svg"></a></div>
+                <div class="button-bg three"><a asp-area="" asp-controller="Moradia" asp-action="index"><img src="~/img/moradia.svg"></a></div>
+                <div class="button-bg four"><a asp-area="" asp-controller="Home" asp-action="ongs"><img src="~/img/ongs parceiras.svg"></a></div>
+                <div class="button-bg five"><a asp-area="" asp-controller="Home" asp-action="doacao"><img src="~/img/doacao.svg"></a></div>
+                <div class="button-bg six"><a asp-area="" asp-controller="Home" asp-action="emergencia"><img src="~/img/Vector.svg"></a></div>
                 <ul class="d-flex flex-column justify-content-around">
                     <li>Informações Úteis</li>
                     <li>Empregos</li>
