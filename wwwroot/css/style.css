@@ -25,9 +25,10 @@
 
 a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.603);
+    /*color: rgba(0, 0, 0, 0.603);*/
     transition: 250ms;
 }
+
 /*footer {
     background: #ffffff;
     position: fixed;
@@ -226,6 +227,12 @@ li {
     .menu-right:hover .button-bg {
         width: 230px;
         transition: ease-in-out 250ms;
+    }
+    .menu-right ul li a{
+        color:#fff;
+    }
+    .menu-right ul li a:hover {
+        text-decoration:none;
     }
 
 
