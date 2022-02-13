@@ -762,7 +762,7 @@ li {
     padding: 1rem;
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+    box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 8%) !important;
 }
 
 .bg-cards-1 {
