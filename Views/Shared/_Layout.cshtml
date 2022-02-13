@@ -43,28 +43,28 @@
                         </div>
                         <img src="~/img/logotipo-new-dark.svg" width="160px" alt="logotipo andor refugiados">
                         <h4>Plataforma</h4>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Informações Úteis</a></li>
-                        <li><a href="">Novas Postagens</a></li>
-                        <li><a href="">Ongs Parceiras</a></li>
-                        <li><a href="">Primeiros Passos</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a asp-controller="Home" asp-action="index">Home</a></li>
+                        <li><a asp-controller="Blog" asp-action="index">Informações Úteis</a></li>
+                        <li><a asp-controller="Feed" asp-action="index">Novas Postagens</a></li>
+                        <li><a asp-controller="Ong" asp-action="index">Ongs Parceiras</a></li>
+                        <li><a asp-controller="Blog" asp-action="index">Primeiros Passos</a></li>
+                        <li><a asp-controller="Contato" asp-action="index">Contato</a></li>
 
                         <h4>Contas</h4>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="cadastrar.html">Cadastrar</a></li>
+                        <li><a asp-controller="Login" asp-action="index">Login</a></li>
+                        <li><a asp-controller="Pessoa" asp-action="create">Cadastrar</a></li>
 
                         <h4>Postagens</h4>
-                        <li><a href="">Moradias</a></li>
-                        <li><a href="">Empregos</a></li>
-                        <li><a href="">Informações Úteis</a></li>
-                        <li><a href="">Ongs Parceiras</a></li>
+                        <li><a asp-controller="Moradia" asp-action="index">Moradias</a></li>
+                        <li><a asp-controller="Trabalho" asp-action="index">Empregos</a></li>
+                        <li><a asp-controller="Blog" asp-action="index">Informações Úteis</a></li>
+                        <li><a asp-controller="Ong" asp-action="index">Ongs Parceiras</a></li>
 
                         <h4>Onde Encontar</h4>
-                        <li><a href="">Ongs</a></li>
-                        <li><a href="">Documentacoes</a></li>
-                        <li><a href="">Revalidaçoes</a></li>
-                        <li><a href="">Minha Comunidade</a></li>
+                        <li><a asp-controller="Ong" asp-action="index">Ongs</a></li>
+                        <li><a asp-controller="Blog" asp-action="index">Documentacoes</a></li>
+                        <li><a asp-controller="Blog" asp-action="index">Revalidaçoes</a></li>
+                        <li><a asp-controller="Blog" asp-action="index">Minha Comunidade</a></li>
 
                     </ul>
                 </div>
@@ -110,19 +110,19 @@
         <main class="row">
             <!-- Menu Lateral fixo -->
             <nav class="menu-right">
-                <div class="button-bg one"><a href=""><img src="~/img/info uteis.svg"></a></div>
+                <div class="button-bg one"><a asp-area="" asp-controller="Blog" asp-action="index"><img src="~/img/info uteis.svg"></a></div>
                 <div class="button-bg two"><a asp-area="" asp-controller="Trabalho" asp-action="index"><img src="~/img/empregos.svg"></a></div>
                 <div class="button-bg three"><a asp-area="" asp-controller="Moradia" asp-action="index"><img src="~/img/moradia.svg"></a></div>
-                <div class="button-bg four"><a asp-area="" asp-controller="Home" asp-action="ongs"><img src="~/img/ongs parceiras.svg"></a></div>
-                <div class="button-bg five"><a asp-area="" asp-controller="Home" asp-action="doacao"><img src="~/img/doacao.svg"></a></div>
-                <div class="button-bg six"><a asp-area="" asp-controller="Home" asp-action="emergencia"><img src="~/img/Vector.svg"></a></div>
+                <div class="button-bg four"><a asp-area="" asp-controller="Ong" asp-action="index"><img src="~/img/ongs parceiras.svg"></a></div>
+                <div class="button-bg five"><a asp-area="" asp-controller="Doacao" asp-action="index"><img src="~/img/doacao.svg"></a></div>
+                <div class="button-bg six"><a asp-area="" asp-controller="Emergencia" asp-action="index"><img src="~/img/Vector.svg"></a></div>
                 <ul class="d-flex flex-column justify-content-around">
-                    <li>Informações Úteis</li>
-                    <li>Empregos</li>
-                    <li>Moradia</li>
-                    <li>Ongs Parceiras</li>
-                    <li>Doação</li>
-                    <li>Emergência</li>
+                    <li><a asp-area="" asp-controller="Blog" asp-action="index">Notícias</a></li>
+                    <li><a asp-area="" asp-controller="Trabalho" asp-action="index">Empregos</a></li>
+                    <li><a asp-area="" asp-controller="Moradia" asp-action="index">Moradia</a></li>
+                    <li><a asp-area="" asp-controller="Ong" asp-action="index">Ongs Parceiras</a></li>
+                    <li><a asp-area="" asp-controller="Doacao" asp-action="index">Doação</a></li>
+                    <li><a asp-area="" asp-controller="Emergencia" asp-action="index">Emergência</a></li>
                 </ul>
             </nav>
             @RenderBody()

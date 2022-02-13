@@ -23,5 +23,23 @@
 
   <ItemGroup>
     <None Remove="Microsoft.CodeAnalysis.Analyzers" />
+    <None Remove="Views\AAndor\" />
+    <None Remove="Views\Feeds\" />
+    <None Remove="Views\Informacoes\" />
+    <None Remove="Views\Emergencia\" />
+    <None Remove="Views\Ongs\" />
+    <None Remove="Views\Contato\" />
+    <None Remove="Views\Ajuda\" />
+    <None Remove="Views\Doacoes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Andor\" />
+    <Folder Include="Views\Feed\" />
+    <Folder Include="Views\Blog\" />
+    <Folder Include="Views\Emergencia\" />
+    <Folder Include="Views\Ong\" />
+    <Folder Include="Views\Contato\" />
+    <Folder Include="Views\Ajuda\" />
+    <Folder Include="Views\Doacao\" />
   </ItemGroup>
 </Project>
