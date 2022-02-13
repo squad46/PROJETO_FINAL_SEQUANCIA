@@ -669,6 +669,7 @@ li {
         width: 65px;
         height: 65px;
         transition: all 0.3s ease-in-out;
+        object-fit:cover;
     }
 
         .avatar-profile img:hover {
@@ -776,8 +777,12 @@ li {
 }
 
 .perfil-menu img {
-    width: 50%;
+    /* width: 50%; */
     border-radius: 50%;
+    object-fit:cover;
+    width:200px;
+    height:200px;
+
 }
 
 .perfil-menu ul li {
@@ -929,9 +934,10 @@ li {
         max-width: 90%;
         margin-bottom: 1rem;
     }
-
-
-
+    .perfil-menu img {
+        width: 200px;
+        height: 200px;
+    }
     /*menu*/
     .space-search {
         display: none;

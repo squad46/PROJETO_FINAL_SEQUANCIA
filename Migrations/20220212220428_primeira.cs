@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Andor.Migrations
 {
-    public partial class Imagens : Migration
+    public partial class primeira : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,7 @@ namespace Andor.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Id_pessoa = table.Column<int>(type: "int", nullable: false),
+                    Id_tipo = table.Column<int>(type: "int", nullable: false),
                     Tipo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Dados = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
@@ -37,8 +37,11 @@ namespace Andor.Migrations
                     CRNM = table.Column<string>(type: "nvarchar(15)", nullable: true),
                     CPF = table.Column<string>(type: "nvarchar(11)", nullable: true),
                     Endereco = table.Column<string>(type: "nvarchar(60)", nullable: true),
+                    Bairro = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     Numero = table.Column<int>(type: "int", nullable: false),
                     CEP = table.Column<int>(type: "int", nullable: false),
+                    UF = table.Column<string>(type: "nvarchar(2)", nullable: true),
+                    Cidade = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     Sexo = table.Column<string>(type: "nvarchar(1)", nullable: true),
                     DataNascimento = table.Column<DateTime>(type: "datetime", nullable: true),
                     Nacionalidade = table.Column<string>(type: "nvarchar(20)", nullable: true),
@@ -114,6 +117,7 @@ namespace Andor.Migrations
                     Tipo = table.Column<string>(type: "nvarchar(15)", nullable: true),
                     Preco = table.Column<decimal>(type: "money", nullable: false),
                     Endereco = table.Column<string>(type: "nvarchar(60)", nullable: true),
+                    Bairro = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     Numero = table.Column<int>(type: "int", nullable: false),
                     CEP = table.Column<int>(type: "int", nullable: false),
                     UF = table.Column<string>(type: "nvarchar(2)", nullable: true),
@@ -149,8 +153,9 @@ namespace Andor.Migrations
                     Salario = table.Column<decimal>(type: "money", nullable: false),
                     Endereco = table.Column<string>(type: "nvarchar(60)", nullable: true),
                     Numero = table.Column<int>(type: "int", nullable: false),
+                    Bairro = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     CEP = table.Column<int>(type: "int", nullable: false),
-                    UF = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UF = table.Column<string>(type: "nvarchar(2)", nullable: true),
                     Cidade = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     NomeContato = table.Column<string>(type: "nvarchar(40)", nullable: true),
                     TelefoneContato = table.Column<string>(type: "nvarchar(13)", nullable: true),

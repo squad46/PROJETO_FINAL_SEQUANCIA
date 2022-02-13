@@ -108,7 +108,7 @@ namespace Andor.Migrations
                     b.Property<byte[]>("Dados")
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<int>("Id_pessoa")
+                    b.Property<int>("Id_tipo")
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
@@ -128,6 +128,9 @@ namespace Andor.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Bairro")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("CEP")
                         .HasColumnType("int");
@@ -188,6 +191,9 @@ namespace Andor.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Bairro")
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<int>("CEP")
                         .HasColumnType("int");
 
@@ -196,6 +202,9 @@ namespace Andor.Migrations
 
                     b.Property<string>("CRNM")
                         .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("Cidade")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Classe")
                         .HasColumnType("nvarchar(10)");
@@ -233,6 +242,9 @@ namespace Andor.Migrations
                     b.Property<string>("Telefone")
                         .HasColumnType("nvarchar(13)");
 
+                    b.Property<string>("UF")
+                        .HasColumnType("nvarchar(2)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Pessoas");
@@ -247,6 +259,9 @@ namespace Andor.Migrations
 
                     b.Property<string>("Atividade")
                         .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Bairro")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("CEP")
                         .HasColumnType("int");
@@ -291,7 +306,7 @@ namespace Andor.Migrations
                         .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("UF")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(2)");
 
                     b.HasKey("Id");
 
