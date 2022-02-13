@@ -3,7 +3,69 @@
 }
 <div id="scrollbar" class="container-fluid pt-0">
     <div class="container">
-        <h2>Contato</h2>
+        <div class="forms-details-full bg-white text-black-50">
+
+            <h2 class="pt-3 border-bottom">Contato</h2>
+
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01"></label>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="Nome" required>
+                        <div class="valid-tooltip">
+                            Muito Bom!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip02"></label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Sobrenome" required>
+                        <div class="valid-tooltip">
+                            Muito Bom!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip02"></label>
+                        <input type="text" class="form-control" id="validationTooltip03" placeholder="Whatsapp" required>
+                        <div class="valid-tooltip">
+                            Muito Bom!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip03"></label>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="E-mail" required>
+                        <div class="invalid-tooltip">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState"></label>
+                        <select id="inputState" class="form-control" required>
+                            <option selected>Dúvida sobre...</option>
+                            <option>Postagem</option>
+                            <option>Notícia</option>
+                            <option>Moradia</option>
+                            <option>Emprego</option>
+                            <option>Funcionalidades</option>
+                            <option>Outros...</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <label for="validationTextarea"></label>
+                    <textarea class="form-control" id="validationTextarea" placeholder="Descreva aqui sua Dúvida" required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter a message in the textarea.
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+
+        </div>
     </div>
 </div>
 

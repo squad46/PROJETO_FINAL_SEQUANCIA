@@ -756,6 +756,15 @@ li {
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
 }
 
+.forms-details-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+}
+
 .bg-cards-1 {
     padding: 1rem;
     background: #fff;
