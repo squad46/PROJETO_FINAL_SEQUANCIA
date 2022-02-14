@@ -52,8 +52,8 @@
                             <option>Outros...</option>
                         </select>
                     </div>
-
                 </div>
+
                 <div class="mb-3">
                     <label for="validationTextarea"></label>
                     <textarea class="form-control" id="validationTextarea" placeholder="Descreva aqui sua Dúvida" required></textarea>
@@ -64,6 +64,72 @@
 
                 <button class="btn btn-primary" type="submit">Enviar</button>
             </form>
+
+            <div class="row">
+                <div class="col-md-4 my-4">
+                    <div class="">
+                        <h4>Dúvidas Frequentes</h4>
+                        <ul class="p-0">                            
+                            <li><span>Como </span><a asp-controller="Ajuda" asp-action="index">Cadastrar</a></li>
+                            <li><span>Como </span><a asp-controller="Ajuda" asp-action="index">Buscar Emprego</a></li>
+                            <li><span>Como </span><a asp-controller="Ajuda" asp-action="index">Buscar Moradia</a></li>
+                            <li><span>Como </span><a asp-controller="Ajuda" asp-action="index">Buscar ONGs</a></li>
+                            <li><span>Como </span><a asp-controller="Ajuda" asp-action="index">Recuperar Senha</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 my-4">
+                    <div class="">
+                        <h4>E-mails</h4>
+                        <ul class="p-0">
+                            <li>
+                                <span>Dúvidas</span>
+                                <a href="mailto:duvidas@andor.org.br">duvidas@andor.org.br</a>
+                            </li>
+                            <li>
+                                <span>Financeiro</span>
+                                <a href="mailto:financeiro@andor.org.br">financeiro@andor.org.br</a>
+                            </li>
+                            <li>
+                                <span>Pesquisas</span>
+                                <a href="mailto:pesquisas@andor.org.br">pesquisas@andor.org.br</a>
+                            </li>
+                            <li>
+                                <span>Marketing</span>
+                                <a href="mailto:marketing@andor.org.br">marketing@andor.org.br</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 my-4">
+                    <div class="">
+                        <h4>ONGs Parceiras</h4>
+                        <ul class="p-0">
+                            <li>
+                                <span>ACNUR</span>
+                                <a href="mailto:duvidas@unhcr.org.br">contato@unhcr.org.br</a>
+                            </li>
+                            <li>
+                                <span>Abraço Cultural</span>
+                                <a href="mailto:duvidas@abracocultural.org.br">contato@abracocultural.org.br</a>
+                            </li>
+                            <li>
+                                <span>Cáritas</span>
+                                <a href="mailto:duvidas@caricas.org.br">contato@caricas.org.br</a>
+                            </li>
+                            <li>
+                                <span>GADE</span>
+                                <a href="mailto:duvidas@gade.org.br">contato@gade.org.br</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
 
         </div>
     </div>
