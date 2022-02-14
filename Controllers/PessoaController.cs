@@ -256,6 +256,15 @@ namespace Andor.Controllers
                 await _context.SaveChangesAsync();
             }
 
+            // deleta avatar
+            var imagemAvatar = _context.Imagens.Where(p => p.Id_tipo == id && p.Tipo == "perfil").ToList();
+            foreach (var _imagemAvatar in imagemAvatar)
+            {
+                _context.Imagens.Remove(_imagemAvatar);
+                await _context.SaveChangesAsync();
+            }
+
+
             // deleta o perfil
             var pessoa = await _context.Pessoas.FindAsync(id);
             _context.Pessoas.Remove(pessoa);
