@@ -763,6 +763,7 @@ li {
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 8%) !important;
+    margin-bottom: 70px;
 }
 
 .bg-cards-1 {
@@ -963,7 +964,7 @@ li {
     .login-register {
         width: 100%;
         padding-right: 0px;
-        padding-left: 5px;
+        padding-left: 15px;
         letter-spacing: 0px;
         align-items: center;
         justify-content: center;
