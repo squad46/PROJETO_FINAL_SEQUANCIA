@@ -35,7 +35,6 @@ namespace Andor.Controllers
                     Response.Cookies.Append("Usuario", pessoa.Nome.ToString()); // Cria cookie com nome
                     ViewData["id"] = idPessoa;
                     ViewData["mensagem"] = "Bem vindo " + pessoa.Nome + ", login efetuado com sucesso!";
-
                 }
             }
             else
@@ -56,8 +55,53 @@ namespace Andor.Controllers
             return Redirect("~/Home");
         }
 
+        public IActionResult EditarSenha(int? id) 
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            if (id.ToString() != Request.Cookies["Id"].ToString())  // Compara se parametro id é diferente de id passado no cookie 
+            {
+                return NotFound();
+            }
 
+            var pessoa = _context.Pessoas.Find(id);
+            if (pessoa == null)
+            {
+                return NotFound();
+            }
+
+            return View(pessoa);
+        }
+
+        // POST: Editar senha
+        [HttpPost]
+        public IActionResult EditarSenha(int id, string senha, string nSenha, string rSenha)
+        {
+            var pessoa = _context.Pessoas.Find(id);
+            if (nSenha == rSenha)
+            {
+                //var pessoa = _context.Pessoas.Find(id);
+                if (pessoa != null && pessoa.Senha == senha)
+                {
+                    pessoa.Senha = nSenha;
+                    _context.Update(pessoa);
+                    _context.SaveChanges();
+                    ViewData["mensagem"] = "Senha atualizada com sucesso!";
+                }
+                else
+                {
+                    ViewData["mensagem"] = "Senha inválida!";
+                }
+            }
+            else
+            {
+                ViewData["mensagem"] = "Repita nova senha!";
+            }
+            return View(pessoa);
+        }
 
         //---------------  Refêrencias -----------------
 
@@ -85,20 +129,6 @@ namespace Andor.Controllers
         //read cookie from Request object  
         string cookieValueFromReq = Request.Cookies["Key"];
         */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
