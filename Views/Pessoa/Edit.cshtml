@@ -19,19 +19,21 @@
                     <h4 class="pt-3 border-bottom text-right">Editar / Completar cadastro</h4>
                    
                     
-                    <form action="/Imagem/UploadImagem" enctype="multipart/form-data" method="post"> <!-- Adicionar imagem ao perfil -->
-
-                        <input type="file" name="arquivos" accept=".jpg, .jpeg, .png"/>
+                    <form action="/Imagem/UploadImagem" enctype="multipart/form-data" method="post">
+                        <!-- Adicionar imagem ao perfil -->
+                        <!--
+                        <input type="file" name="arquivos" accept=".jpg, .jpeg, .png" />
                         <input type="hidden" asp-for="Id" name="id_pessoa" />
                         <input type="hidden" value="perfil" name="tipo" />
                         <button class="btn btn-editar">Enviar Imagem</button>
+                         -->
 
-                        <div >
+                        <div>
                             <label class="control-label">Avatar</label>
-                            <input class="form-control" type="file" name="arquivos" accept=".jpg, .jpeg, .png"/>
+                            <input class="form-control" type="file" name="arquivos" accept=".jpg, .jpeg, .png" />
                             <input type="hidden" asp-for="Id" name="id_pessoa" />
                         </div>
-                        <div class="text-right">             
+                        <div class="text-right">
                             <button class="btnn mt-3">Enviar Imagem</button>
                         </div>
 
