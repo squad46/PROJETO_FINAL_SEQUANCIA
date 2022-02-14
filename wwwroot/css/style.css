@@ -1581,3 +1581,49 @@ h4 {
     border-radius: 0.5rem;
     line-height: 1.5rem;
 } */
+
+/*Ongs parceiras*/
+
+.title-ongs-parceiras{
+    font-weight: 500;
+}
+
+.container{
+    margin-bottom: 9rem;
+}
+
+.card{
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px) {
+    .container{
+        margin-left:2rem;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .container {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:425px) {
+    .container {
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:424px) {
+    .container {
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .container {
+        padding-left: 1rem;
+    }
+}
+
