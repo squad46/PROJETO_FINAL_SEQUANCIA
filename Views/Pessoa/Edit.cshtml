@@ -27,16 +27,16 @@
                         <input type="hidden" value="perfil" name="tipo" />
                         <button class="btn btn-editar">Enviar Imagem</button>
                          -->
-
-                        <div>
-                            <label class="control-label">Avatar</label>
-                            <input class="form-control" type="file" name="arquivos" accept=".jpg, .jpeg, .png" />
-                            <input type="hidden" asp-for="Id" name="id_pessoa" />
+                        <div class="row">
+                            <div class="col-10">
+                                <label class="control-label">Avatar</label>
+                                <input class="form-control" type="file" name="arquivos" accept=".jpg, .jpeg, .png" />
+                                <input type="hidden" asp-for="Id" name="id_pessoa" />
+                            </div>
+                            <div class="d-flex align-items-end col-2">
+                                <button class="btn mt-3">Enviar</button>
+                            </div>
                         </div>
-                        <div class="text-right">
-                            <button class="btnn mt-3">Enviar Imagem</button>
-                        </div>
-
                     </form>
 
                     <form action="" method="post" class="mt-3">
