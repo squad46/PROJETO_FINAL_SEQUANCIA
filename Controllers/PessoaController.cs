@@ -145,6 +145,7 @@ namespace Andor.Controllers
         // GET: Pessoa/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+       
             if (id == null)
             {
                 return NotFound();
@@ -170,6 +171,7 @@ namespace Andor.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Senha,Telefone,CRNM,CPF,Endereco,Bairro,UF,Cidade,Numero,CEP,Sexo,DataNascimento,Nacionalidade,DataCadastro")] Pessoa pessoa)
         {
+            
             if (id != pessoa.Id)
             {
                 return NotFound();
@@ -195,13 +197,13 @@ namespace Andor.Controllers
                 }
   
                 return Redirect("~/Pessoa/Details/" + id);
-           
+         
             }
            
             return Redirect("~/Pessoa/Details/" + id);
+
         }
-
-
+ 
         // GET: Pessoa/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
