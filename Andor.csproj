@@ -42,9 +42,4 @@
     <Folder Include="Views\Ajuda\" />
     <Folder Include="Views\Doacao\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Update="wwwroot\img\Caritas brasileiras.PNG">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 </Project>
