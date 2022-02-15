@@ -69,9 +69,13 @@ namespace Andor.Controllers
             {
                 imagem = _context.Imagens.FirstOrDefault(m => m.Id == id && m.Tipo == tipo);
             }
-            else if(tipo == "perfil") 
+            else if (tipo == "perfil")
             {
                 imagem = _context.Imagens.FirstOrDefault(m => m.Id_tipo == id && m.Tipo == tipo);
+            }
+            else if (tipo == "moradia_lista") 
+            {
+                imagem = _context.Imagens.FirstOrDefault(m => m.Id_tipo == id && m.Tipo == "moradia" && m.Nome == "img1");
             }
             
             if (imagem != null)

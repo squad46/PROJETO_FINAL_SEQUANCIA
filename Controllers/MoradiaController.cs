@@ -18,8 +18,25 @@ namespace Andor.Controllers
 
         public IActionResult Index(int? id)
         {
-            return View("Detalhes");
+            ViewData["moradias"] = _context.Moradias.OrderByDescending(x => x.DataCadastro).ToList();     // cria lista de moradias 
+            //return View("Detalhes");
+            return View();
         }
+
+        [HttpPost] // faz filtro de moradias por uf 
+        public IActionResult Filtrar(string uf)
+        {
+            if (uf != "UF")
+            {
+                ViewData["moradias"] = _context.Moradias.OrderByDescending(x => x.DataCadastro).Where(p => p.UF == uf).ToList(); // cria lista de moradias com filtro por uf
+            }
+            else
+            {
+                ViewData["moradias"] = _context.Moradias.OrderByDescending(x => x.DataCadastro).ToList(); // cria lista de moradias sem filtro
+            }
+            return View("Index");
+        }
+
 
         [HttpGet] // detalhes de moradia
         public IActionResult Detalhes(int id, int pessoaId)
