@@ -328,7 +328,7 @@ li {
 .max-width-800 {
     max-width: 800px;
     width: 100%;
-    min-width: 700px;
+    min-width: 0px;
 }
 
 .card-infos {
@@ -342,9 +342,15 @@ li {
     position: relative;
 }
 
-.card-infos-48 {
-    height: 400px;
-    width: 48.5%;
+.card-infos-2-3 {
+    height: 410px;
+    margin: 5px;
+    background-color: #081333;
+    border-radius: 15px;
+    background-color: #081333;
+    border-radius: 15px;
+    color: #fff;
+    position: relative;
 }
 
 .card-infos-img {
@@ -364,7 +370,7 @@ li {
     /*background: linear-gradient( 90deg, rgb(52 57 135) 0%, rgb(18 79 206) 100%);*/
     margin: 14px;
     border-radius: 10px;
-    height: 50%;
+    /*height: 50%;*/
     padding: 1.3rem;
     border: 2px dotted #242164;
 }
@@ -869,9 +875,8 @@ li {
         font-size: 1.2rem;
     }
 
-    .card-infos-48 {
+    .card-infos-2-3 {
         height: 400px;
-        width: 100%;
     }
 
     .card-infos {
@@ -892,7 +897,7 @@ li {
     .max-width-800 {
         max-width: 800px;
         width: 100%;
-        min-width: 100px;
+        min-width: 0px;
     }
 
     /*perfil details*/

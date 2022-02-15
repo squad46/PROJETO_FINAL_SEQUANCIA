@@ -3,7 +3,11 @@
 
 .pag_title {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    color: #081333;
+    font-size: 1.5rem;
+    font-weight:700;
+
 }
 
 .blog_grid {
@@ -11,6 +15,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px 80px;
+    margin-bottom: 80px;
 }
 
 .blog {
@@ -19,7 +24,7 @@
 }
 
     .blog .blog_card {
-        background-color: #242164;
+        background-color: #081333;
         border-radius: 0.5rem;
         display: grid;
         grid-template-columns: 5rem 1fr 4rem;
