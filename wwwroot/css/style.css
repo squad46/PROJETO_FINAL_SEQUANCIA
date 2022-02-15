@@ -1588,14 +1588,14 @@ h4 {
     font-weight: 500;
 }
 
-.container{
+div .container {
     margin-bottom: 9rem;
+    margin-left: 4rem;
 }
 
 .card {
     margin-bottom: 1rem;
     border-radius: 15px;
-    background-color: #081333;
 }
 
 @media screen and (min-width:1024px) and (max-width:1439px) {
