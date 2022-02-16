@@ -1510,13 +1510,14 @@ h4 {
     margin-bottom: 0.3rem;
 }
 
-
-
-/* BLOG 
+/* BLOG */
 
 .pag_title {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    color: #081333;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .blog_grid {
@@ -1524,6 +1525,7 @@ h4 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px 80px;
+    margin-bottom: 80px;
 }
 
 .blog {
@@ -1532,7 +1534,7 @@ h4 {
 }
 
     .blog .blog_card {
-        background-color: #242164;
+        background-color: #081333;
         border-radius: 0.5rem;
         display: grid;
         grid-template-columns: 5rem 1fr 4rem;
@@ -1601,15 +1603,23 @@ h4 {
     margin-bottom: 1rem;
 }
 
-
 .blog_info .blog_about {
     padding: 1rem;
     background-color: #f7f7f7;
     border-radius: 0.5rem;
     line-height: 1.5rem;
-} */
+} 
 
 /*Ongs parceiras*/
+
+.title-ongs-parceiras {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-left: 5rem;
+    color: #081333;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
 .title-ongs-parceiras{
     font-weight: 500;
