@@ -8,7 +8,7 @@
     <link rel="icon" href="~/img/logotipo-icon.svg" type="image/x-icon">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
@@ -18,14 +18,12 @@
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-         <!-- Font Awesome  -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!--<link rel="stylesheet" href="~/css/site.css" />-->
     <link rel="stylesheet" href="~/css/style.css" />
 
-    <!-- EXCLUIR QUANDO INCORPORAR NO CSS PRINCIPAL     -->
-    <link rel="stylesheet" href="~/css/StyleSheet.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="~/js/script.js" defer></script>
@@ -146,34 +144,35 @@
     <script _src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script _src="~/js/site.js" asp-append-version="true"></script>
 
-    <script>const id = Cookies.get('Id');
-        const user = Cookies.get('Usuario');
-        if (typeof id !== 'undefined') {
-            $('#on').show();
-            $('#off').hide();
-            var nome = user.split(' ').shift();
-            $('#usuario').text(nome);
-            var link = "/Pessoa/Details/" + id;
-            $('#usuario').attr('href', link);
-        }
-        else {
-            $('#on').hide();
-            $('#off').show();
-        }
+    <script>
+        const id = Cookies.get('Id');
+                const user = Cookies.get('Usuario');
+                if (typeof id !== 'undefined') {
+                    $('#on').show();
+                    $('#off').hide();
+                    var nome = user.split(' ').shift();
+                    $('#usuario').text(nome);
+                    var link = "/Pessoa/Details/" + id;
+                    $('#usuario').attr('href', link);
+                }
+                else {
+                    $('#on').hide();
+                    $('#off').show();
+                }
 
-        $("#feed-trabalhos").click(function () {
-            $("#trabalhos").show();
-            $("#moradias").hide();
-            $("#informacoes").hide();
-            $("#ongs").hide();
-        });
-        $("#feed-moradias").click(function () {
-            $("#trabalhos").hide();
-            $("#moradias").show();
-            $("#informacoes").hide();
-            $("#ongs").hide();
-        });
-        // https://github.com/js-cookie/js-cookie</script>
+                $("#feed-trabalhos").click(function () {
+                    $("#trabalhos").show();
+                    $("#moradias").hide();
+                    $("#informacoes").hide();
+                    $("#ongs").hide();
+                });
+                $("#feed-moradias").click(function () {
+                    $("#trabalhos").hide();
+                    $("#moradias").show();
+                    $("#informacoes").hide();
+                    $("#ongs").hide();
+                });
+                // https://github.com/js-cookie/js-cookie</script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
@@ -188,4 +187,4 @@
 </script>
 
 
- <script src="~/js/jq.js"></script>
+<script src="~/js/jq.js"></script>
